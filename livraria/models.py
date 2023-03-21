@@ -33,6 +33,8 @@ class Livros(models.Model):
     isbn = models.CharField(max_length=23,  null=True, blank=True)
     quantidade = models.IntegerField(default=0)
     preco = models.DecimalField(max_digits=7, decimal_places=2,default=0)
+    categoria = models.ForeignKey(Categoria, on_delete=models.PROTECT, related_name="livros")
+    editora = models.ForeignKey(Editora, on_delete=models.PROTECT, related_name="livros")
 
 
     def __str__(self) :
@@ -40,3 +42,4 @@ class Livros(models.Model):
     
     class Meta:
         verbose_name_plural ="Livros"
+
