@@ -4,4 +4,4 @@ from livraria.models import Categoria
 class CategoriaSerializer(ModelSerializer):
     class Meta:
         model = Categoria
-        filds = "__all__"
+        fields = "__all__"
