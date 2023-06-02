@@ -25,7 +25,7 @@ class LivrosViewSet(ModelViewSet):
     }
 
     def get_serializer_class(self):
-        return self.serializer_class.get(self.action, LivrosListSerializer)
+        return self.serializer_class.get(self.action, LivrosSerializer)
         
 
 class CategoriaViewSet(ModelViewSet):
